@@ -6,6 +6,7 @@ export default function App() {
     <div className="h-screen bg-base-100 flex items-center justify-center py-10 px-5">
       <Clipboard>
         <Paper>
+          
         </Paper>
       </Clipboard>
     </div>
