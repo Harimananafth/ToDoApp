@@ -10,9 +10,6 @@ export default function Paper({ children }) {
       {/* Contenu principal  */}
       <div className="w-full grow overflow-y-auto relative">
         <div className="min-h-full relative p-3">
-          {children}
-
-          {/* Lignes bleues décoratives */}
           <div
             className="absolute inset-0 pointer-events-none opacity-20"
             style={{
@@ -21,6 +18,8 @@ export default function Paper({ children }) {
               marginTop: "2rem",
             }}
           ></div>
+
+          <div className="relative flex flex-col gap-3">{children}</div>
         </div>
       </div>
 
@@ -30,8 +29,9 @@ export default function Paper({ children }) {
           type="text"
           placeholder="Ajouter une nouvelle tâche"
           className="input input-md  grow "
+          maxLength={60}
         />
-        <button className="btn btn-neutral hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+        <button className="btn btn-neutral btn-square hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
           <Plus />
         </button>
       </div>
